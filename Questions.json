@@ -1,0 +1,165 @@
+{
+    "Preguntas": [
+      [
+        {
+          "question": "How many time zones are there in Russia?",
+          "category" : 0,
+          "options": ["A. 11", "B. 5", "C. 8", "D. 14"],
+          "answer":"A"
+        },
+        {
+          "category" : 0,
+          "question": "How many stripes are there on the US flag?",
+          "options": ["A. 15", "B. 12", "C. 13", "D. 10"],
+          "answer":"C"
+        },
+        {
+          "category" : 0,
+          "question": "Which of the following empires had no written language?",
+          "options": ["A. Egyptian", "B. Roman", "C. Aztec", "D. Incan" ],
+          "answer":"D"
+        },
+        {
+          "category":0,
+          "question": "How many days does it take for the Earth to orbit the Sun?",
+          "options": ["A. 365","B. 363", "C. 368", "D. 370"],
+          "answer": "A"
+        },
+        {
+          "category":0,
+          "question": "What’s the national flower of Japan?",
+          "options": ["A. Tulip", "B. Cherry blossom", "C. Orchid", "D. Sunflower"],
+          "answer":"B"
+        }
+      ],
+      [
+        {
+          "category":1,
+          "question": "What country has the most islands in the world?",
+          "options": ["A. Colombia", "B. Denmark", "C. Swedend", "D. England"],
+          "answer":"C"
+        },
+        {
+          "category":1,
+          "question": "What’s the smallest country in the world?",
+          "options": ["A. Austria", "B. The Vatican", "C. Barbados", "D. Belize"],
+          "answer":"B"
+        },
+        {
+          "category":1,
+          "question": "What’s the capital of Canada?",
+          "options": ["A. Alberta", "B. Ontario", "C. Quebec", "D. Ottawa"],
+          "answer":"D"
+        },
+        {
+          "category":1,
+          "question": "Name the longest river in the world?",
+          "options": ["A. Nile", "B. Amazon", "C. Yangtze", "D. Parana River"],
+          "answer":"A"
+        },
+        {
+          "category":1,
+          "question": "Name the  highest mountain in the world?",
+          "options": ["A. K2", "B. Annapurna I", "C. Makalu", "D. Mount Everest"],
+          "answer":"D"
+        }
+      ],
+      [
+        {
+          "category":2,
+          "question": "Which language has the most words (according to dictionary entries)?",
+          "options": ["A. Spanish", "B. French", "C. Russian", "D. English"],
+          "answer":"D"
+        },
+        {
+          "category":2,
+          "question": "Who invented the World Wide Web, and when? ",
+          "options": ["A. Guido van Rossum - (1991)", "B. Tim Berners-Lee - (1990)",
+                     "C. Bjarne Stroustrup - (1982)", "D. Yukihiro Matsumoto - (1995)"],
+          "answer":"B"
+        },
+        {
+          "category":2,
+          "question": "When Apollo 11 landed on the Moon? ",
+          "options": ["A. July 20th, 1969", "B. June 13th, 1970", "C. March 15th, 1968", "D. October 21th, 1980 "],
+          "answer":"A"
+        },
+        {
+          "category":2,
+          "question": "What’s the national animal of Australia? ",
+          "options": ["A. Panda", "B. Lion", "C. Red Kangaroo", "D. Gorilla"],
+          "answer":"C"
+        },
+        {
+          "category":2,
+          "question": "Where was the first modern Olympic Games held? ",
+          "options": ["A. Munich", "B. Los Angeles", "C. Beijin", "D. Athens"],
+          "answer":"D"
+        }
+      ],
+      [
+        {
+          "category":3,
+          "question": "What is the clothing company called Blue Ribbon Sports currently called? ",
+          "options": ["A. Adidas", "B. Puma", "C. Nike", "D. Onitsuka Tiger"],
+          "answer":"C"
+        },
+        {
+          "category":3,
+          "question": "When was Netflix founded?",
+          "options": ["A. 1994", "B. 1997", "C. 2001", "D. 2003"],
+          "answer":"B"
+        },
+        {
+          "category":3,
+          "question": "What is the most-watched series on Netflix of all of time?",
+          "options": ["A. The Witcher", "B. Stranger Things", "C. La Casa de Papel", "D. Squid Game"],
+          "answer":"D"
+        },
+        {
+          "category":3,
+          "question": "How many keys does a classic piano have?",
+          "options": ["A. 88", "B. 92", "C. 102", "D. 82"],
+          "answer":"A"
+        },
+        {
+          "category":3,
+          "question": "Where is Heavy Metal Band Slipknot from?",
+          "options": ["A. Los Angeles - California", "B. Des Moines - Iowa", "C. Leyton - East London", "D. Copenhagen - Denmark"],
+          "answer":"B"
+        }
+      ],
+      [
+        {
+          "category":4,
+          "question": "What is the name of the coffee shop in the sitcom Friends?",
+          "options": ["A. Central Park", "B. Central Perk", "C. Blue Bottle Coffee", "D. Perk Kafe"],
+          "answer":"B"
+        },
+        {
+          "category":4,
+          "question": "Name Disney’s first film? ",
+          "options": ["A. Pinocchio", "B. Dumbo", "C. Snow White", "D. Alice in Wonderland"],
+          "answer":"C"
+        },
+        {
+          "category":4,
+          "question": "What city do The Beatles come from? ",
+          "options": ["A. Liverpool", "B. Bristol", "C. London", "D. Birmingham"],
+          "answer":"A"
+        },
+        {
+          "category":4,
+          "question": "Which from the following drivers has won the most Formula 1 championships?",
+          "options": ["A. Ayrton Senna", "B. Juan Manuel Fangio", "C. Alain Prost", "D. Michael Schumacher"],
+          "answer":"D"
+        },
+        {
+          "category":4,
+          "question": "Which artist painted the ceiling of the Sistine Chapel in Rome?",
+          "options": ["A. Leonardo Da Vinc", "B. Michelangelo", "C. Sandro Botticelli", "D. Tiziano Vecellio"],
+          "answer":"B"
+        }
+      ]
+    ]
+}
