@@ -1,4 +1,4 @@
-import json, random, os, time
+import json, random, os, time, datetime
 
 with open('Questions.json','r',encoding='utf-8') as f:
     json_preguntas = json.loads(f.read())
@@ -23,6 +23,14 @@ def clear_screen():
 #----------------------------------------
 
 def check_answer(option,cat,correct):
+    username=''
+    if option == "E":
+        points = cat * 5000
+        print()
+        username = input('Be part of our leaderboard, what is your name? :  ')
+        save_score(points,username)
+    
+        
     if option == correct:
         cat+=1
         points = cat * 5000
@@ -31,39 +39,40 @@ def check_answer(option,cat,correct):
         if cat <= 4:
             show_question(cat)
         elif cat > 4:
-            save_score(points)
             print()
             print('YOU WON !!!!!')
-    elif option != correct:
+            print()
+            username = input('Be part of our leaderboard, what is your name? :  ')   
+            save_score(points,username)
+    elif option != correct and option != "E":
         print()
         print('SORRY - YOU LOST!!')
-        exit(1)
+        end_game()
 
 #----------------------------------------
 
-def save_score(points):
+def save_score(points,username):
     filename='scores.txt' 
     file_exists = os.path.exists(filename)
-    #print(file_exists)
+    current_date = datetime.datetime.now()    
     if file_exists:
-        print('existe')
-        score_data =str(points)
+        score_data =(username +',  '+ str(points)+' Points'+',  '+ str(current_date.strftime("%c")))
         with open(filename, 'a') as f:
             f.write(score_data)
             f.write('\n')
+            end_game()
     else:
-        print('No existe')
-        score_data =str(points)
+        score_data =(username +',  '+ str(points)+' Points'+',  '+ str(current_date.strftime("%c")))
         with open(filename, 'w') as f:
             f.write(score_data)
             f.write('\n')
+            end_game()
     
 
 #----------------------------------------
 
 def show_question(category):
     clear_screen()
-    #print(category)
     category_questions = json_preguntas['Preguntas'][category]
     ramdom_question=random.randint(0,4)    
     print (category_questions[ramdom_question]['question'])    
@@ -76,7 +85,6 @@ def show_question(category):
     selected_option=input('Select one Option (A, B, C, or D) type E to exit the game : ')
     selected_option=selected_option.upper()
     correct_answer= category_questions[ramdom_question]['answer']
-    #print(correct_answer)    
     check_answer(selected_option,category,correct_answer)
 
 #----------------------------------------   
@@ -97,6 +105,16 @@ def welcome_screen():
      time.sleep(3)
 
 #----------------------------------------    
+
+def end_game():
+    clear_screen()
+    print(80*"-")
+    print()
+    print('Thanks to participate in the Quizz Game')
+    print()
+    print('I hope you enjoyed it')
+    print()
+    print(80*"-")
 
 #------     Game Start      -------------
 
