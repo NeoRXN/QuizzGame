@@ -8,8 +8,6 @@ with open('Questions.json','r',encoding='utf-8') as f:
 #----------------------------------------
 def new_game():
     category = 0    
-    if category == 0:
-        welcome_screen()
     show_question(category)
 
 
@@ -77,38 +75,41 @@ def save_score(points):
 
 
 def show_question(category):
-    #os.system('cls')
     clear_screen()
     #print(category)
     category_questions = json_preguntas['Preguntas'][category]
-    ramdom_question=random.randint(0,4)
+    ramdom_question=random.randint(0,4)    
+    print (category_questions[ramdom_question]['question'])    
     print(80 * "-")
-    print (category_questions[ramdom_question]['question'])
     print()
     for options in category_questions[ramdom_question]['options']:
         print (options)
     print()
+    print(80 * "-")
     selected_option=input('Select one Option (A, B, C, or D) type E to exit the game : ')
     selected_option=selected_option.upper()
     correct_answer= category_questions[ramdom_question]['answer']
-    #print(correct_answer)
+    #print(correct_answer)    
     check_answer(selected_option,category,correct_answer)
-    print(80 * "-")
+   
 
 def welcome_screen():
      clear_screen()
      print(80 * "-")
      print()
-     print('Welcome to QUIZZGAME !!!!!!')
-     print('\n')
-     username = input('What is your Name? : ')
-     print('\n')
-     print('Are you ready?')
+     print('          Welcome to QUIZZGAME !!!!!!')
+     print('')
+     print('We are going to put into test your General Knowledge')
+     print('')
+     print('Are you ready?, The game will start in a few seconds')
+     print('')
+     print('Our evil elfs are working on the questions ...... hehehe :) ')
+     print('')
      print(80 * "-")
-     time.sleep(2)
-     return username
+     time.sleep(3)
+    
 
-
+welcome_screen()
 new_game()
 
 
