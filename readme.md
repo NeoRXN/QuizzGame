@@ -16,8 +16,7 @@ categorias diferentes que son los niveles de dificultad de un grupo de 5 pregunt
 El segundo archivo QuizzGame.py contiene la aplicacion y es en la cual se define la logica para utilizar 
 las preguntas del archivo anteriomente nombrado.  
 
-### NOTA: Es importante aclarar que tanto el archivo Questions.json como el archivo QuizzGame.py deben
-ubicados en la misma carpeta o ruta para que la aplicacion pueda ejecutar de forma correcta.  
+### NOTA: Es importante aclarar que tanto el archivo Questions.json como el archivo QuizzGame.py deben estar ubicados en la misma carpeta o ruta para que la aplicacion pueda ejecutar de forma correcta.  
   
 El ultimo archivo es generado dinamicamente por la aplicacion y en el se encuentra el nombre,
 el puntaje, y la fecha de cada jugador que haya copmpletado el juego satisfactoriamente o que haya
