@@ -10,8 +10,8 @@ def new_game():
     category = 0    
     show_question(category)
 
-
 #------------------------------------------------
+
 def clear_screen(): 
     if os.name == "posix":
         time.sleep(3)
@@ -20,8 +20,8 @@ def clear_screen():
         time.sleep(3)
         os.system ("cls")
 
-
 #----------------------------------------
+
 def check_answer(option,cat,correct):
     if option == correct:
         cat+=1
@@ -39,18 +39,8 @@ def check_answer(option,cat,correct):
         print('SORRY - YOU LOST!!')
         exit(1)
 
-
-    #----------------------------------------
-def display_score():
-        pass
-
 #----------------------------------------
-def play_again():
-    pass
 
-
-
-#----------------------------------------
 def save_score(points):
     filename='scores.txt' 
     file_exists = os.path.exists(filename)
@@ -69,10 +59,7 @@ def save_score(points):
             f.write('\n')
     
 
-
-
-
-
+#----------------------------------------
 
 def show_question(category):
     clear_screen()
@@ -91,7 +78,8 @@ def show_question(category):
     correct_answer= category_questions[ramdom_question]['answer']
     #print(correct_answer)    
     check_answer(selected_option,category,correct_answer)
-   
+
+#----------------------------------------   
 
 def welcome_screen():
      clear_screen()
@@ -107,48 +95,10 @@ def welcome_screen():
      print('')
      print(80 * "-")
      time.sleep(3)
-    
+
+#----------------------------------------    
+
+#------     Game Start      -------------
 
 welcome_screen()
 new_game()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''print(json_preguntas['Preguntas'][0][0]['pregunta'])
-print(json_preguntas['Preguntas'][0][1]['pregunta'])
-print(json_preguntas['Preguntas'][0][2]['pregunta'])
-print(json_preguntas['Preguntas'][0][3]['pregunta'])
-print(json_preguntas['Preguntas'][0][4]['pregunta'])
-#print(json_preguntas['Preguntas'][0])
-pre = json_preguntas['Preguntas'][2]
-pregunta_mostrar=random.randint(0,4)
-
-#print(type(pre))
-print(80 * "-")
-print (pre[pregunta_mostrar]['question'])
-print()
-#print (pre[pregunta_mostrar]['options'])
-for op in pre[pregunta_mostrar]['options']:
-    print (op)
-print()
-print('Select one Option : ')
-print(80 * "-")
-
-#print(json_preguntas['Preguntas'][0][0]['opciones'][3]['flag'])
-#bandera= json_preguntas['Preguntas'][0][0]['opciones'][3]['flag']
-#print(bandera)'''
