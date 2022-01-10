@@ -3,9 +3,13 @@ import json, random, os, time
 with open('Questions.json','r',encoding='utf-8') as f:
     json_preguntas = json.loads(f.read())
 
+
+
 #----------------------------------------
 def new_game():
-    category = 0
+    category = 0    
+    if category == 0:
+        welcome_screen()
     show_question(category)
 
 
@@ -23,11 +27,13 @@ def clear_screen():
 def check_answer(option,cat,correct):
     if option == correct:
         cat+=1
+        points = cat * 5000
         print()
-        print("CORRECT!!!!! Your cumulative score is: "+ str(cat*5) + " Points" )
+        print("CORRECT!!!!! Your cumulative score is: "+ str(points) + " Points" )
         if cat <= 4:
             show_question(cat)
         elif cat > 4:
+            save_score(points)
             print()
             print('YOU WON !!!!!')
     elif option != correct:
@@ -43,6 +49,31 @@ def display_score():
 #----------------------------------------
 def play_again():
     pass
+
+
+
+#----------------------------------------
+def save_score(points):
+    filename='scores.txt' 
+    file_exists = os.path.exists(filename)
+    #print(file_exists)
+    if file_exists:
+        print('existe')
+        score_data =str(points)
+        with open(filename, 'a') as f:
+            f.write(score_data)
+            f.write('\n')
+    else:
+        print('No existe')
+        score_data =str(points)
+        with open(filename, 'w') as f:
+            f.write(score_data)
+            f.write('\n')
+    
+
+
+
+
 
 
 def show_question(category):
@@ -64,6 +95,18 @@ def show_question(category):
     check_answer(selected_option,category,correct_answer)
     print(80 * "-")
 
+def welcome_screen():
+     clear_screen()
+     print(80 * "-")
+     print()
+     print('Welcome to QUIZZGAME !!!!!!')
+     print('\n')
+     username = input('What is your Name? : ')
+     print('\n')
+     print('Are you ready?')
+     print(80 * "-")
+     time.sleep(2)
+     return username
 
 
 new_game()
